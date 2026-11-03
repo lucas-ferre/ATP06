@@ -1,0 +1,25 @@
+[project]
+name = "pds-model"
+version = "0.0.1"
+description = "PDS - Pipeline de Modelos"
+authors = [
+    {name = "Lucas"}
+]
+
+requires-python = ">=3.11"
+dependencies = [
+    "pandas (>=2.3.3,<4.0.0)",
+    "scikit-learn (>=1.2,<1.8.0)",
+    "imbalanced-learn (>=0.14.0)",
+    "numpy (>=2.3.5,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "pds", from = "src"}]
+
+[tool.poetry.scripts]
+modelpip = "pds.pipeline:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
